@@ -268,7 +268,7 @@ class FeaturedCourseCard extends StatelessWidget {
                   const SizedBox(height: 8),
                   Row(
                     children: [
-                      Icon(Icons.star_rounded,
+                      const Icon(Icons.star_rounded,
                           size: 14, color: AppTheme.starColor),
                       const SizedBox(width: 3),
                       Text(
@@ -280,7 +280,7 @@ class FeaturedCourseCard extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 10),
-                      Icon(Icons.schedule_rounded,
+                      const Icon(Icons.schedule_rounded,
                           size: 13, color: AppTheme.textHint),
                       const SizedBox(width: 3),
                       Text(
@@ -394,7 +394,7 @@ class RecentCourseCard extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 8),
-            Icon(Icons.arrow_forward_ios_rounded,
+            const Icon(Icons.arrow_forward_ios_rounded,
                 size: 14, color: AppTheme.textHint),
           ],
         ),
@@ -470,7 +470,7 @@ class _StatItem extends StatelessWidget {
         const SizedBox(width: 4),
         Text(
           value,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w600,
             color: AppTheme.textPrimary,

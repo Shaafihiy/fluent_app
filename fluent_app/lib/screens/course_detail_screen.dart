@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../models/course.dart';
 import '../theme/app_theme.dart';
-import '../widgets/course_widgets.dart';
 
 class CourseDetailScreen extends StatefulWidget {
   final Course course;
@@ -115,7 +114,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
         child: Container(
           margin: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.2),
+            color: Colors.gray.withOpacity(0.2),
             borderRadius: BorderRadius.circular(10),
           ),
           child: const Icon(Icons.arrow_back_ios_new_rounded,
@@ -134,7 +133,9 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
             child: AnimatedSwitcher(
               duration: const Duration(milliseconds: 200),
               child: Icon(
-                _isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
+                _isSaved
+                    ? Icons.bookmark_rounded
+                    : Icons.bookmark_border_rounded,
                 color: Colors.white,
                 size: 20,
                 key: ValueKey(_isSaved),
@@ -168,8 +169,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
               errorBuilder: (_, __, ___) => Container(
                 color: AppTheme.categoryColor(course.category).withOpacity(0.3),
                 child: Icon(Icons.school_rounded,
-                    size: 80,
-                    color: AppTheme.categoryColor(course.category)),
+                    size: 80, color: AppTheme.categoryColor(course.category)),
               ),
             ),
             // Gradient overlay
@@ -195,8 +195,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
     return Row(
       children: [
         Container(
-          padding:
-              const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
           decoration: BoxDecoration(
             color: AppTheme.categoryColor(course.category).withOpacity(0.12),
             borderRadius: BorderRadius.circular(20),
@@ -212,8 +211,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
         ),
         const SizedBox(width: 8),
         Container(
-          padding:
-              const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
           decoration: BoxDecoration(
             color: AppTheme.levelColor(course.level).withOpacity(0.12),
             borderRadius: BorderRadius.circular(20),
@@ -243,7 +241,8 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
       children: [
         CircleAvatar(
           radius: 18,
-          backgroundColor: AppTheme.categoryColor(course.category).withOpacity(0.2),
+          backgroundColor:
+              AppTheme.categoryColor(course.category).withOpacity(0.2),
           child: Text(
             course.instructor[0],
             style: TextStyle(
@@ -327,8 +326,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
       children: course.tags
           .map(
             (tag) => Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
                 color: AppTheme.primaryLight,
                 borderRadius: BorderRadius.circular(20),
@@ -376,19 +374,19 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
           icon: Icons.ondemand_video_rounded,
           text: '${course.duration} hours of on-demand video',
         ),
-        _InfoTile(
+        const _InfoTile(
           icon: Icons.all_inclusive_rounded,
           text: 'Full lifetime access',
         ),
-        _InfoTile(
+        const _InfoTile(
           icon: Icons.phone_android_rounded,
           text: 'Access on mobile and desktop',
         ),
-        _InfoTile(
+        const _InfoTile(
           icon: Icons.workspace_premium_rounded,
           text: 'Certificate of completion',
         ),
-        _InfoTile(
+        const _InfoTile(
           icon: Icons.download_rounded,
           text: 'Downloadable resources',
         ),

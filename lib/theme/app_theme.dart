@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   // Colors
-  static const Color primary = Color(0xFF6C63FF);
-  static const Color primaryDark = Color(0xFF4A42D4);
+  static const Color primary = Color.fromARGB(255, 99, 255, 190);
+  static const Color primaryDark = Color.fromARGB(255, 154, 66, 212);
   static const Color primaryLight = Color(0xFFEEEDFF);
   static const Color accent = Color(0xFFFF6584);
   static const Color accentOrange = Color(0xFFFF9A3C);
@@ -133,7 +133,8 @@ class AppTheme {
           color: textHint,
           fontSize: 14,
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       ),
     );
   }

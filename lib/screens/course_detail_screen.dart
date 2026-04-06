@@ -374,19 +374,19 @@ class _CourseDetailScreenState extends State<CourseDetailScreen>
           icon: Icons.ondemand_video_rounded,
           text: '${course.duration} hours of on-demand video',
         ),
-        _InfoTile(
+        const _InfoTile(
           icon: Icons.all_inclusive_rounded,
           text: 'Full lifetime access',
         ),
-        _InfoTile(
+        const _InfoTile(
           icon: Icons.phone_android_rounded,
           text: 'Access on mobile and desktop',
         ),
-        _InfoTile(
+        const _InfoTile(
           icon: Icons.workspace_premium_rounded,
           text: 'Certificate of completion',
         ),
-        _InfoTile(
+        const _InfoTile(
           icon: Icons.download_rounded,
           text: 'Downloadable resources',
         ),
